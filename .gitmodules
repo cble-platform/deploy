@@ -1,0 +1,6 @@
+[submodule "cble-frontend"]
+	path = cble-frontend
+	url = git@github.com:cble-platform/cble-frontend.git
+[submodule "cble-backend"]
+	path = cble-backend
+	url = git@github.com:cble-platform/cble-backend.git
