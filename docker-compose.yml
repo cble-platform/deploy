@@ -5,8 +5,7 @@ services:
     build:
       context: ./cble-frontend
       args:
-        - DOMAIN=http://cble.platform
-        - VITE_API_BASE_URL=http://cble.platform
+        - VITE_API_BASE_URL=http://localhost
     image: cble-platform/frontend
     container_name: cble-frontend
     restart: unless-stopped
@@ -29,6 +28,7 @@ services:
     network_mode: host
     volumes:
       - ./config.local.yaml:/app/config.local.yaml
+      - /tmp/cble-providers:/app/providers-cache
     # env_file: .env
   db:
     image: postgres:15-alpine
